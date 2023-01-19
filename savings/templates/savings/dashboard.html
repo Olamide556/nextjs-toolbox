@@ -1,0 +1,138 @@
+{% extends 'savings/base.html' %}
+{% block content%}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-4 " style="color:darkblue; text-align:center;">
+            <h1>BENOZY SAVINGS</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-2 " style="color:darkblue;">
+            <form method="POST">
+                {% csrf_token%}
+
+
+                 <div class="form-group pt-3">
+                     <b> <label for="name"><i >Title</i></label></b>
+
+                             <select class="form-control"  type="text" name="name" required>
+                                 <option value ="0" selected disabled ></option>
+                                <option value="DAILY SAVINGS">DAILY SAVINGS</option>
+                                <option value="HALF WEEKLY SAVINGS">HALF WEEKLY SAVINGS </option>
+                                <option value="FULL WEEKLY SAVINGS">FULL WEEKLY SAVINGS</option>
+                             </select>
+                 </div>
+
+                 <div class="form-group pt-3">
+                        <label for="price">Price</label>
+                     <select class="form-control"  type="number" name="price" required>
+                         <option value ="0" selected disabled ></option>
+                        <option value=58>N58</option>
+                        <option value=375>N375</option>
+                        <option value=708>N708</option>
+                     </select>
+                 </div>
+
+                 <div class="row" >
+
+                        <div class="col-md-4 col-sm-12">
+                            <div class="form-group pt-3">
+                                <label  for="category">CATEGORY</label>
+                                <select class="form-control" name="category"  required>
+                                    <option value ="0" selected disabled></option>
+                                    <option value="cosmetics">COSMETICS</option>
+                                    <option value="wears">WEARS</option>
+                                    <option value="gadget">GADGETS</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="form-group pt-3">
+                                <label for="day">Day</label>
+                                <select  class="form-control"  type="text" name="day" required >
+                                    <option value ="0" selected disabled ></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                  </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-4 col-sm-12">
+                            <div class="form-group pt-3">
+                                <label  for="month">Month</label>
+                                <select class="form-control" name="month"  required>
+                                    <option value ="0" selected disabled></option>
+                                    <option value="JANUARY">JANUARY</option>
+                                    <option value="FEBRUARY">FEBRUARY</option>
+                                    <option value="MARCH">MARCH</option>
+                                    <option value="APRIL">APRIL</option>
+                                    <option value="MAY">MAY</option>
+                                    <option value="JUNE">JUNE</option>
+                                    <option value="JULY">JULY</option>
+                                    <option value="AUGUST">AUGUST</option>
+                                    <option value="SEPTEMBER">SEPTEMBER</option>
+                                    <option value="OCTOBER">OCTOBER</option>
+                                    <option value="NOVEMBER">NOVEMBER</option>
+                                    <option value="DECEMBER">DECEMBER</option>
+                                </select>
+                            </div>
+                        </div>
+                 </div>
+                <div class="row justify-content-center mt-1">
+                    <button type="submit" class="btn btn-outline-blue"  >SAVE NOW</button>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content%}
